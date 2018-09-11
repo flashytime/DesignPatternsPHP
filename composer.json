@@ -1,0 +1,20 @@
+{
+  "name": "flashytime/design-patterns-php",
+  "description": "Sample code for several design patterns in PHP",
+  "authors": [
+    {
+      "name": "flashytime",
+      "email": "myflashytime@gmail.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {
+    "php": ">=5.6",
+    "psr/http-message": "^1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "DesignPatterns\\": ""
+    }
+  }
+}

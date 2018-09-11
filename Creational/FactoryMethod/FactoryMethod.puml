@@ -1,0 +1,41 @@
+@startuml
+interface Logger {
+    + log($message)
+}
+
+class StdoutLogger {
+    + log($message)
+}
+
+class FileLogger {
+    - $filePath
+    + __construct($filePath)
+    + log($message)
+}
+
+Logger <|.. StdoutLogger
+Logger <|.. FileLogger
+
+interface LoggerFactory {
+    + createLogger()
+}
+
+class StdoutLoggerFactory {
+    + createLogger()
+}
+
+class FileLoggerFactory {
+    - $filePath
+    + __construct($filePath)
+    + createLogger()
+}
+
+LoggerFactory <|.. StdoutLoggerFactory
+LoggerFactory <|.. FileLoggerFactory
+LoggerFactory ..> Logger
+
+class Client
+
+Client ..> LoggerFactory
+
+@enduml

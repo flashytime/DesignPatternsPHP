@@ -1,0 +1,60 @@
+@startuml
+abstract class Vehicle {
+    - $parts
+    + setPart($key, $value)
+}
+
+class Car
+class Truck
+
+Vehicle <|-- Car
+Vehicle <|-- Truck
+
+class Engine
+class Door
+class Wheel
+
+interface Builder {
+    + createVehicle()
+    + addWheel()
+    + addEngine()
+    + addDoor()
+    + getVehicle()
+}
+
+class CarBuilder {
+    - $car
+    + createVehicle()
+    + addWheel()
+    + addEngine()
+    + addDoor()
+    + getVehicle()
+}
+
+class TruckBuilder {
+    - $truck
+    + createVehicle()
+    + addWheel()
+    + addEngine()
+    + addDoor()
+    + getVehicle()
+}
+
+Builder <|.. CarBuilder
+Builder <|.. TruckBuilder
+CarBuilder ..> Vehicle
+TruckBuilder ..> Vehicle
+
+class Director {
+    + build(Builder $builder)
+}
+
+Director ..> Builder
+
+class Client
+
+Client ..> Director
+Client ..> CarBuilder
+Client ..> TruckBuilder
+
+@enduml

@@ -1,0 +1,54 @@
+@startuml
+interface Cat {
+    + voice()
+}
+
+class WhiteCat {
+    + voice()
+}
+
+class BlackCat {
+    + voice()
+}
+
+interface Dog {
+    + voice()
+}
+
+class WhiteDog {
+    + voice()
+}
+
+class BlackDog {
+    + voice()
+}
+
+Cat <|.. WhiteCat
+Cat <|.. BlackCat
+Dog <|.. WhiteDog
+Dog <|.. BlackDog
+
+interface AnimalFactory {
+    + createCat()
+    + createDog()
+}
+
+class WhiteAnimalFactory {
+    + createCat()
+    + createDog()
+}
+
+class BlackAnimalFactory {
+    + createCat()
+    + createDog()
+}
+
+AnimalFactory <|.. WhiteAnimalFactory
+AnimalFactory <|.. BlackAnimalFactory
+AnimalFactory ..> Cat
+AnimalFactory ..> Dog
+
+class Client
+
+Client ..> AnimalFactory
+@enduml
