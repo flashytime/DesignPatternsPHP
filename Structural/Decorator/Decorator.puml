@@ -1,0 +1,34 @@
+@startuml
+interface Booking {
+    + calculatePrice()
+    + getDescription()
+}
+
+class DoubleRoomBooking {
+    + calculatePrice()
+    + getDescription()
+}
+
+abstract class BookingDecorator {
+    # Booking $booking
+    + __construct($booking)
+}
+
+Booking <|.. DoubleRoomBooking
+Booking <|.. BookingDecorator
+
+class Wifi {
+    - {static} PRICE
+    + calculatePrice()
+    + getDescription()
+}
+
+class ExtraBed {
+    - {static} PRICE
+    + calculatePrice()
+    + getDescription()
+}
+
+BookingDecorator <|-- Wifi
+BookingDecorator <|-- ExtraBed
+@enduml

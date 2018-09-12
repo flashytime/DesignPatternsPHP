@@ -33,9 +33,4 @@ class FileLoggerFactory {
 LoggerFactory <|.. StdoutLoggerFactory
 LoggerFactory <|.. FileLoggerFactory
 LoggerFactory ..> Logger
-
-class Client
-
-Client ..> LoggerFactory
-
 @enduml

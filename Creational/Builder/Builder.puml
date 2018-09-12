@@ -50,11 +50,4 @@ class Director {
 }
 
 Director ..> Builder
-
-class Client
-
-Client ..> Director
-Client ..> CarBuilder
-Client ..> TruckBuilder
-
 @enduml

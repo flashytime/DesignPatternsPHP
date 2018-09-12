@@ -1,0 +1,30 @@
+@startuml
+interface Formatter {
+    + format($text)
+}
+
+class PlainTextFormatter {
+    + format($text)
+}
+
+class HtmlFormatter {
+    + format($text)
+}
+
+Formatter <|.. PlainTextFormatter
+Formatter <|.. HtmlFormatter
+
+abstract class Service {
+    # Formatter $formatter
+    + __construct($formatter)
+    + setFormatter($formatter)
+    + get()
+}
+
+class HelloWorldService {
+    + get()
+}
+
+Service <|-- HelloWorldService
+Service o--> Formatter
+@enduml

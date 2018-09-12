@@ -47,8 +47,4 @@ AnimalFactory <|.. WhiteAnimalFactory
 AnimalFactory <|.. BlackAnimalFactory
 AnimalFactory ..> Cat
 AnimalFactory ..> Dog
-
-class Client
-
-Client ..> AnimalFactory
 @enduml

@@ -1,0 +1,42 @@
+@startuml
+interface BookInterface {
+    + open()
+    + turnPage()
+    + getPage()
+}
+
+class Book {
+    - $page
+    + open()
+    + turnPage()
+    + getPage()
+}
+
+BookInterface <|.. Book
+
+interface EBookInterface {
+    + unlock()
+    + pressNext()
+    + getPage()
+}
+
+class Kindle {
+    - $page
+    - $totalPage
+    + unlock()
+    + pressNext()
+    + getPage()
+}
+
+EBookInterface <|.. Kindle
+
+class EBookAdapter {
+    # EBookInterface $eBook
+    + __construct($eBook)
+    + open()
+    + turnPage()
+    + getPage()
+}
+
+BookInterface <|.. EBookAdapter
+@enduml
