@@ -11,5 +11,6 @@
 - [装饰器模式(Decorator)](https://github.com/flashytime/design-patterns-php/tree/master/Structural/Decorator)
 - [适配器模式(Adapter)](https://github.com/flashytime/design-patterns-php/tree/master/Structural/Adapter)
 - [桥接模式(Bridge)](https://github.com/flashytime/design-patterns-php/tree/master/Structural/Bridge)
+- [代理模式(Proxy)](https://github.com/flashytime/design-patterns-php/tree/master/Structural/Proxy)
 
 ### 行为型(Behavioral)

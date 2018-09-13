@@ -1,0 +1,19 @@
+@startuml
+interface Subject {
+    + action()
+}
+
+class RealSubject {
+    + action()
+}
+
+class ProxySubject {
+    - RealSubject $realSubject
+    + __construct()
+    + action()
+}
+
+Subject <|.. RealSubject
+Subject <|.. ProxySubject
+RealSubject <-- ProxySubject
+@enduml
