@@ -12,5 +12,7 @@
 - [适配器模式(Adapter)](https://github.com/flashytime/design-patterns-php/tree/master/Structural/Adapter)
 - [桥接模式(Bridge)](https://github.com/flashytime/design-patterns-php/tree/master/Structural/Bridge)
 - [代理模式(Proxy)](https://github.com/flashytime/design-patterns-php/tree/master/Structural/Proxy)
+- [外观模式(Facade)](https://github.com/flashytime/design-patterns-php/tree/master/Structural/Facade)
+- [组合模式(Composite)](https://github.com/flashytime/design-patterns-php/tree/master/Structural/Composite)
 
 ### 行为型(Behavioral)
