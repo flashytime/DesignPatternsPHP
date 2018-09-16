@@ -15,6 +15,7 @@ class ProxyTest extends TestCase
     public function testProxySubject()
     {
         $subject = new ProxySubject();
+        $this->expectOutputString('do sth before action' . PHP_EOL . 'Real Subject' . PHP_EOL . 'do sth after action' . PHP_EOL);
         $subject->action();
     }
 }
