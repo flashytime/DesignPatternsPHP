@@ -1,0 +1,41 @@
+@startuml
+class Camera {
+    + turnOn()
+    + turnOff()
+    + rotate($degrees)
+}
+
+class Light {
+    + turnOn()
+    + turnOff()
+    + changeBulb()
+}
+
+class Sensor {
+    + activate()
+    + deactivate()
+    + trigger()
+}
+
+class Alarm {
+    + activate()
+    + deactivate()
+    + ring()
+    + stopRing()
+}
+
+class SecurityFacade {
+    - Camera $camera
+    - Light $light
+    - Sensor $sensor
+    - Alarm $alarm
+    + __construct()
+    + activate()
+    + deactivate()
+}
+
+SecurityFacade --> Camera
+SecurityFacade --> Light
+SecurityFacade --> Sensor
+SecurityFacade --> Alarm
+@enduml

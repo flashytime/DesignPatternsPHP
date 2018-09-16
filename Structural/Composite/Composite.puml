@@ -1,0 +1,32 @@
+@startuml
+interface Renderable {
+    + render()
+}
+
+class Html {
+    - $elements
+    + render()
+    + addElement(Renderable $element)
+    + removeElement(Renderable $element)
+}
+
+class DivElement {
+    + render()
+}
+
+class SpanElement {
+    + render()
+}
+
+class TextElement {
+    - $text
+    + __construct($text)
+    + render()
+}
+
+Renderable <|.. Html
+Renderable <|.. DivElement
+Renderable <|.. SpanElement
+Renderable <|.. TextElement
+Html o--> Renderable
+@enduml
