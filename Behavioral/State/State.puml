@@ -1,0 +1,35 @@
+@startuml
+interface State {
+    + proceedNext(OrderContext $context)
+    + toString()
+}
+
+class StateCreated {
+    + proceedNext(OrderContext $context)
+    + toString()
+}
+
+class StateShipped {
+    + proceedNext(OrderContext $context)
+    + toString()
+}
+
+class StateDone{
+    + proceedNext(OrderContext $context)
+    + toString()
+}
+
+State <|.. StateCreated
+State <|.. StateShipped
+State <|.. StateDone
+
+class OrderContext {
+    - State $state
+    + {static} create()
+    + setState(State $state)
+    + proceedNext()
+    + toString()
+}
+
+OrderContext o--> State
+@enduml

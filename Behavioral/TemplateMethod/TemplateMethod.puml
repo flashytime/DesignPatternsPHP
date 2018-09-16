@@ -1,0 +1,23 @@
+@startuml
+abstract class Journey {
+    - $thingsToDo : array
+    + takeATrip()
+    # {abstract} enjoyVacation()
+    # buyGift()
+    - buyAFlight()
+    - takePlane()
+    + getThingsToDo()
+}
+
+class BeachJourney {
+    # enjoyVacation()
+}
+
+class CityJourney {
+    # enjoyVacation()
+    # buyGift()
+}
+
+Journey <|-- BeachJourney
+Journey <|-- CityJourney
+@enduml

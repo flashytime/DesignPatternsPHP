@@ -1,0 +1,28 @@
+@startuml
+interface SplObserver {
+    + update(SplSubject $subject)
+}
+
+interface SplSubject {
+    + attach(SplObserver $observer)
+    + detach(SplObserver $observer)
+    + notify()
+}
+
+class UserActionObserver {
+    + update(SplSubject $subject)
+}
+
+class UserAction {
+    - $observers
+    + attach(SplObserver $observer)
+    + detach(SplObserver $observer)
+    + notify()
+    + login()
+    + logout()
+}
+
+SplObserver <|.. UserActionObserver
+SplSubject <|.. UserAction
+UserAction --> SplObserver
+@enduml

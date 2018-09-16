@@ -1,0 +1,24 @@
+@startuml
+interface Comparator {
+    + compare($a, $b)
+}
+
+class DateComparator {
+    + compare($a, $b)
+}
+
+class IdComparator {
+    + compare($a, $b)
+}
+
+Comparator <|.. DateComparator
+Comparator <|.. IdComparator
+
+class Context {
+    - Comparator $comparator
+    + __construct(Comparator $comparator)
+    + handle(array $elements)
+}
+
+Context o--> Comparator
+@enduml

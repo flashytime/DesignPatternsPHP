@@ -1,0 +1,36 @@
+@startuml
+abstract class Handler {
+    - $handler
+    # $handlerName
+    + __construct($handlerName)
+    + setNext(Handler $handler)
+    + handle($request)
+    # {abstract} process($request)
+}
+
+class Leader {
+    # process($request)
+}
+
+class Manager {
+    # process($request)
+}
+
+class GeneralManager {
+    # process($request)
+}
+
+class Request {
+    - $name
+    - $day
+    + setName($name)
+    + getName()
+    + setDay($day)
+    + getDay()
+}
+
+Handler <-- Handler
+Handler <|-- Leader
+Handler <|-- Manager
+Handler <|-- GeneralManager
+@enduml

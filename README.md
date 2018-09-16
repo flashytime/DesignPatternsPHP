@@ -16,3 +16,8 @@
 - [组合模式(Composite)](https://github.com/flashytime/design-patterns-php/tree/master/Structural/Composite)
 
 ### 行为型(Behavioral)
+- [观察者模式(Observer)](https://github.com/flashytime/design-patterns-php/tree/master/Behavioral/Observer)
+- [模板方法模式(TemplateMethod)](https://github.com/flashytime/design-patterns-php/tree/master/Behavioral/TemplateMethod)
+- [策略模式(Strategy)](https://github.com/flashytime/design-patterns-php/tree/master/Behavioral/Strategy)
+- [状态模式(State)](https://github.com/flashytime/design-patterns-php/tree/master/Behavioral/State)
+- [责任链模式(ChainOfResponsibility)](https://github.com/flashytime/design-patterns-php/tree/master/Behavioral/ChainOfResponsibility)
