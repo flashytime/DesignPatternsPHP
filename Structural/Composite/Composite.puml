@@ -11,10 +11,14 @@ class Html {
 }
 
 class DivElement {
+    - Renderable $element
+    + __construct(Renderable $element)
     + render()
 }
 
 class SpanElement {
+    - Renderable $element
+    + __construct(Renderable $element)
     + render()
 }
 

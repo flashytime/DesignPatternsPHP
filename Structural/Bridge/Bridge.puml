@@ -21,10 +21,10 @@ abstract class Service {
     + get()
 }
 
-class HelloWorldService {
+class TestService {
     + get()
 }
 
-Service <|-- HelloWorldService
+Service <|-- TestService
 Service o--> Formatter
 @enduml

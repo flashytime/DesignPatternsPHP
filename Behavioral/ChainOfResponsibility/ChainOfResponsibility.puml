@@ -6,6 +6,7 @@ abstract class Handler {
     + setNext(Handler $handler)
     + handle($request)
     # {abstract} process($request)
+    # success()
 }
 
 class Leader {

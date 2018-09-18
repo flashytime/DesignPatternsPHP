@@ -39,4 +39,5 @@ class EBookAdapter {
 }
 
 BookInterface <|.. EBookAdapter
+EBookInterface <--o EBookAdapter
 @enduml
